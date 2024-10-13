@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            text-decoration:none;
+        }
+        body{
+            font-family:'Times New Roman', Times, serif ;
+            background-image: url(richuyinxiang.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        header {
+            background: linear-gradient(to bottom right, #ff7e5f, #feb47b, #6dd5ed, #ff758e);
+            color: rgb(245, 245,213);
+            padding: 30px;
+            text-align: center;
+            height: 100px;
+            margin-bottom: 20px;
+            border-radius: 15px;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: blink;
+            margin-right: 15px;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffc107;
+        }
+
+        /* 左侧导航栏样式 */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+/* 导航栏中的链接样式 */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* 鼠标悬停在链接时的效果 */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/* 关闭按钮样式 */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* 主内容区域样式 */
+#main {
+    transition: margin-left 0.5s;
+    padding: 16px;
+}
+       .content {
+            margin-left: 200px;
+            padding: 20px;           
+        }
+        
+        .content1 {
+            margin-top: 20px;
+            height:20vh;
+            width:78rem;
+            background-color:antiquewhite;
+        }
+        .aisi{
+            text-align: right;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .content2{
+            margin-top: 20px;
+            height:20vh;
+            width:78rem;
+            background-color:rgb(215, 250, 220);
+
+        }
+
+        .content3{
+            margin-top: 20px;
+            height:20vh;
+            width:78rem;
+            background-color:rgb(32, 155, 161);
+        }
+
+        .content4{
+            margin-top: 20px;
+            height:20vh;
+            width:78rem;
+            background-color:rgb(107, 156, 23);
+        }
+
+        .content5{
+            margin-top: 20px;
+            height:20vh;
+            width:78rem;
+            background-color:rgb(158, 133, 18);
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <div id="sideNav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">首页</a>
+        <a href="#">服务</a>
+        <a href="#">关于我们</a>
+        <a href="#">联系我们</a>
+    </div>
+    
+    <div id="main">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+        <h2></h2>
+        <p></p>
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("sideNav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("sideNav").style.width = "0";
+            document.getElementById("main").style.marginLeft= "0";
+        }
+    </script>
+    <!-- 这是边框内容 -->
+    <!-- 弹出的按钮需要两个标签来实现 -->
+    
+    <div class="sidebar">      
+        <ul>
+            <li class="leftside"><a href="#"></a></li>
+            <li class="leftside"><a href="#"></a></li>
+            <li class="leftside"><a href="#"></a></li>
+            <li class="leftside"><a href="#"></a></li>
+        </ul>
+    </div>
+    <!-- 这是正文内容，是网页里面的主要内容 -->
+    <div class="content">
+        <header>
+            <h1>万阳的前端小站</h1>
+            <h3>你好，欢迎来到我的前端小站，远道而来的旅人呀，欢迎回家！</h3>
+        </header>
+
+        <nav>
+            <a href="#">首页</a>
+            <a href="#">关于我</a>
+            <a href="#">文章列表</a>
+            <a href="#">联系我</a>
+        </nav>
+
+        <div class="content1"></div>
+
+        <div class="content2"></div>
+
+        <div class="content3"></div>
+
+        <div class="content4"></div>
+
+        <div class="content5"></div>
+    </div>
+
+    <div class="backTop" id="backTop">Top</div>
+    <script>
+        const backTop = document.querySelector('#backTop');
+        window.addEventListener('scroll', function () {
+        const scrollTop = document.documentElement.scrollTop;
+        backTop.style.opacity = scrollTop >= 300 ? 1 : 0;
+        });
+        backTop.addEventListener('click', function () {
+        document.documentElement.scrollTop = 0;
+        });
+    </script>
+</body>
+</html>
